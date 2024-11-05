@@ -35,11 +35,12 @@ export const Title = styled.h2`
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
-    max-width: 90%;
+    max-width: 70%;
     margin-bottom: 20px;
     line-height: 44px;
 
     color: #FFFFFF;
+
 `
 
 export const TitleLogin = styled.p`
@@ -61,15 +62,23 @@ export const SubtitleLogin = styled.p`
 `
 
 
-export const EsqueciText  = styled.p`
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 19px;
+export const explain = styled.p`
+    width: 372px;
+    height: 75px;
+    top: 498px;
+    left: 750px;
+    gap: 0px;
+    opacity: 0px;
+    
+    font-family: Open Sans;
+    font-size: 1px;
+    font-weight: 400;
+    line-height: 24.51px;
+    text-align: left;
 
-    color: #E5E044;
+    color: #FFFFFF;
 ` 
+
 
 export const CriarText =  styled.p`
     font-family: 'Open Sans';
@@ -77,6 +86,7 @@ export const CriarText =  styled.p`
     font-weight: 700;
     font-size: 14px;
     line-height: 19px;
+    display: inline;
     cursor: pointer;
 
     color: #23DD7A;

@@ -5,6 +5,7 @@ import { Header } from '../../components/Header';
 import { Input } from '../../components/Input';
 import { api } from '../../services/api';
 
+
 import { useForm } from "react-hook-form";
 
 
@@ -19,6 +20,10 @@ const Login = () => {
         mode: 'onChange',
     });
 
+    const handleClickCadastro = () => {
+        navigate('/cadastro')
+    };
+
     const onSubmit = async (formData) => {
         try{
             const {data} = await api.get(`/users?email=${formData.email}&senha=${formData.senha}`);
@@ -30,7 +35,8 @@ const Login = () => {
 
             alert('Usuário ou senha inválido')
         }catch(e){
-            //TODO: HOUVE UM ERRO
+            console.error("Erro ao fazer login:", e); 
+            alert('Ocorreu um erro ao tentar fazer login. Por favor, tente novamente mais tarde.'); 
         }
     };
 
@@ -56,7 +62,7 @@ const Login = () => {
                 </form>
                 <Row>
                     <EsqueciText>Esqueci minha senha</EsqueciText>
-                    <CriarText>Criar Conta</CriarText>
+                    <CriarText onClick={handleClickCadastro}>Criar Conta </CriarText>
                 </Row>
                 </Wrapper>
             </Column>
